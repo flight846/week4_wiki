@@ -11,14 +11,14 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= f.label :body %>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, cols: 40, rows: 14, class: "form-control"%>
   </div>
 
   <div class="field">
@@ -26,7 +26,7 @@
     <%= f.collection_select :article_id, Article.all, :id, :title %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.submit class: "btn btn-primary" %>
   </div>
 <% end %>

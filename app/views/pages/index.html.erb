@@ -1,31 +1,39 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Pages</h1>
+<div class="container">
+    <div class="row">
+        <h1>Pages</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th>Article</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Body</th>
+              <th>Article</th>
+              <th>Page</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
 
-  <tbody>
-    <% @pages.each do |page| %>
-      <tr>
-        <td><%= page.title %></td>
-        <td><%= page.body %></td>
-        <td><%= page.article.title %></td>
-        <td><%= link_to 'Show', page %></td>
-        <td><%= link_to 'Edit', edit_page_path(page) %></td>
-        <td><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+          <tbody>
+            <% @pages.each do |page| %>
+              <tr>
+                <td><%= page.title %></td>
+                <td><%= truncate page.body, length: 250 %><br><%= link_to 'Edit', edit_page_path(page) %> | <%= link_to 'Show', page %> | <%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td><%= page.article.title %></td>
+                <td><%= page.id %></td>
+              </tr>
+          </tbody>
+                  
+                  
+                  
+            
+           <% end %>
+        </table>
+    </div>
+    <div class="row">
+        <%= link_to 'New Page', new_page_path %>
+    </div>
+</div>
 
-<br>
 
-<%= link_to 'New Page', new_page_path %>
