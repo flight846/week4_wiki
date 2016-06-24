@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= f.label :article_id, "Select the article name" %>
-    <%= f.collection_select :article_id, Article.all, :id, :name %>
+    <%= f.collection_select :article_id, Article.all, :id, :title %>
   </div>
 
   <div class="actions">

@@ -1,2 +1,48 @@
-<h1>Static#faq</h1>
-<p>Find me in app/views/static/faq.html.erb</p>
+<%= render 'sidebar' %>
+
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <div class="container-fluid">
+        <h1 class="page-header">FAQs</h1>
+        <div class="panel-group" id="accordion">
+            <h3 class="faqHeader">General questions</h3>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Is account registration required?</a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        Account registration is only required if you will be contributing articles to this site. 
+                        This ensures the legitimacy of articles written by the contributor.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">Can I submit my own articles about the things that I like?</a>
+                    </h4>
+                </div>
+                <div id="collapseTen" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        A lot of the content of the site has been submitted by the community. Whether it is a commercial articles, research, or resources from the net. 
+                        All credits are published along with the resources. 
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">Who will be editting my published articles?</a>
+                    </h4>
+                </div>
+                <div id="collapseEleven" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Contributors are to make sure that credits are cited and the reliablity of the sources are correct. Articles that are deemed incorrect will be editted by our community.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
